@@ -1,0 +1,175 @@
+/* style.css – Clean minimal theme for Life Guard website */
+
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #0a5b5b; /* deep teal */
+}
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2rem; margin-bottom: 0.5rem;}
+h3 {font-size: 1.5rem; margin-bottom: 0.5rem;}
+
+p {margin-bottom: 1rem;}
+
+a {
+  color: #007b8a;
+  text-decoration: none;
+}
+a:hover {text-decoration: underline;}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.logo-icon {font-size: 1.5rem;}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  padding: 0.5rem 0.2rem;
+  position: relative;
+}
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #007b8a;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  padding: 4rem 0;
+}
+.hero-inner {display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;}
+.hero-text {flex: 1 1 45%;}
+.hero-tag {color: #007b8a; font-weight: 500; text-transform: uppercase; margin-bottom: 0.5rem;}
+.hero .accent {color: #007b8a;}
+.hero-visual {flex: 1 1 45%;}
+.hero-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.hero-card-icon {font-size: 2rem; margin-bottom: 0.5rem;}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary {background: #007b8a; color: #fff; border: none;}
+.btn-primary:hover {background: #005f6a;}
+.btn-outline {background: transparent; color: #007b8a; border: 2px solid #007b8a;}
+.btn-outline:hover {background: #007b8a; color: #fff;}
+.btn-white {background: #fff; color: #007b8a; border: 2px solid #007b8a;}
+.btn-white:hover {background: #f0f0f0;}
+
+/* Highlights */
+.highlights {padding: 3rem 0; background: #fff;}
+.highlight-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;}
+.highlight-item {text-align: center; padding: 1rem;}
+.h-icon {font-size: 2rem; margin-bottom: 0.5rem;}
+
+/* Course cards */
+.course-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;}
+.course-card {background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; flex-direction: column;}
+.course-badge {background: #e0f2f1; color: #00695c; font-size: 0.85rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; align-self: flex-start; margin-bottom: 0.5rem;}
+.course-badge.featured {background: #ffecb3; color: #795548;}
+.course-meta {font-size: 0.85rem; color: #555; margin-bottom: 0.5rem; display: flex; gap: 1rem;}
+.course-topics {list-style: none; padding-left: 0; margin-top: 0.5rem;}
+.course-topics li {margin-bottom: 0.3rem;}
+.course-video-placeholder {margin-top: 0.5rem;}
+.video-inner-sm {background: #e0e0e0; height: 120px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #555; font-size: 0.9rem;}
+
+/* CTA strip */
+.cta-strip {background: #007b8a; color: #fff; padding: 2rem 0; text-align: center;}
+.cta-strip .btn-white {background: #fff; color: #007b8a; border: none;}
+
+/* Footer */
+.footer {background: #222; color: #ccc; padding: 2rem 0; font-size: 0.9rem;}
+.footer a {color: #ccc;}
+.footer a:hover {color: #fff;}
+.footer-inner {display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;}
+.footer-brand {display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: #fff;}
+.footer-nav {display: flex; gap: 1rem; flex-wrap: wrap;}
+.footer-copy {margin-top: 1rem;}
+.footer-crisis {margin-top: 0.5rem; color: #ff8a80;}
+
+/* Form placeholder */
+.form-embed-wrapper {margin: 2rem 0;}
+.form-placeholder {border: 2px dashed #bbb; padding: 2rem; text-align: center; background: #fafafa;}
+.form-placeholder-inner {max-width: 600px; margin: 0 auto;}
+.form-icon {font-size: 2rem; margin-bottom: 0.5rem;}
+.code-hint {background: #e8e8e8; padding: 0.5rem; border-radius: 4px; font-family: monospace; overflow-x: auto;}
+
+/* Video placeholder */
+.video-placeholder {background: #e0e0e0; height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #555; position: relative;}
+.video-inner {text-align: center;}
+.play-icon {font-size: 3rem; margin-bottom: 0.5rem;}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {display: none; flex-direction: column; background: #fff; position: absolute; top: 100%; right: 0; width: 200px; border: 1px solid #e0e0e0;}
+  .nav-links.show {display: flex;}
+  .hamburger {display: block;}
+  .hero-inner {flex-direction: column;}
+  .hero-text, .hero-visual {flex: 1 1 100%;}
+}
